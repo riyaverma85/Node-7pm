@@ -2,8 +2,8 @@ const http = require("http");
  const fs=require("fs");
 http.createServer((reg,res)=>{
     res.write("<h1>hello world</h1>");
-    fs.writeFile("riya.txt",(err,data)=>{
-      if (err)throw err;
+    fs.readFile("riya.txt",(err,data)=>{
+      if(err) throw err;
       res.write(data);
       res.end();
     })
