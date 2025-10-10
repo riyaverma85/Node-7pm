@@ -41,12 +41,48 @@
 //   console.log("file created");
 // })
 
-const fs =require("fs");
-fs.writeFile("ranu.pdf","welcome",(err)=>{
-  if (err)throw err;
-  console.log("file created");
+// const fs =require("fs");
+// fs.writeFile("ranu.pdf","welcome",(err)=>{
+//   if (err)throw err;
+//   console.log("file created");
+// })
+
+// const fs =require("fs");
+// fs.unlink("riya.txt",(err)=>{
+//   if(err)throw err;
+//   console.log("file deleted");
+// })
+
+
+// const fs =require("fs");
+// fs.rename("rani.pdf","raj.pdf",(err)=>{
+//   if. (err) throw err;
+//   console.log("file renamed");
+// })
+
+//====================================EXPRESSS==========================================================================
+// const express= require("express");
+// const app = express();
+
+
+// app.listen(8000,() =>{
+//   console.log("server is run on port 8000");
+// })
+// const express=require("express");
+// const app=express();
+// app.get("/",(req,res)=>{
+//   res.send("<h1>hello world</h1>");
+
+// })
+// app.listen(8000,()=>{
+//   console.log("server is run on port 8000");
+// }) 
+
+const express =require("express");
+const app =express();
+const stuRoute =require("./routers/stuRoute");
+app.use ("/",stuRoute);
+
+app.listen(8000,()=>{
+    console.log ("server Run on 8000 port");
 })
-
-
-
-
